@@ -1,10 +1,10 @@
 import requests
 from colr import color
 
-version = "2.70"
+version = "2.79"
 enablePrivateLogging = True
-hide_names = True
-hide_levels = True
+hide_names = False
+hide_levels = False
 
 
 gamemodes = {
@@ -73,6 +73,11 @@ AGENTCOLORLIST = {
     "neon": (28, 69, 161),
     "viper": (48, 186, 135),
     "yoru": (52, 76, 207),
+    "harbor": (0, 128, 128),
+    "gekko": (60, 179, 113),
+    "vyse": (97, 83, 183),
+    "iso": (154, 222, 255),
+    "clove": (191, 158, 227),
 }
 
 
@@ -162,18 +167,18 @@ DEFAULT_CONFIG = {
             "skin": True,
             "rr": True,
             "peakrank": True,
-            "previousrank" : False,
+            "previousrank" : True,
             "leaderboard": True,
             "headshot_percent": True,
             "winrate": True,
-            "kd": False,
+            "kd": True,
             "level": True
         },
         "flags": {
             "last_played": True,
             "auto_hide_leaderboard": True,
             "pre_cls": False,
-            "game_chat": True,
+            "game_chat": False,
             "peak_rank_act": True,
             "discord_rpc": True,
             "aggregate_rank_rr": True
