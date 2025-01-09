@@ -23,6 +23,14 @@ Fork of [VALORANT rank yoinker](https://github.com/zayKenyon/VALORANT-rank-yoink
 4) `pip install -r requirements.txt`
 5) `py main.py`
 
+#### Shortcut
+1. Right-click on `START.bat`.
+2. Create a shortcut.
+   - (Optional) Change the icon:
+     - Right-click on the shortcut.
+     - Select `Properties` > `Change Icon`.
+
+
 ### Compiling:
 
 1) `pip install cx_Freeze`
