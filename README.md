@@ -21,7 +21,7 @@ Fork of [VALORANT rank yoinker](https://github.com/zayKenyon/VALORANT-rank-yoink
 2) Download the [source](https://github.com/pintoso/VRY-ShowNames/archive/refs/heads/master.zip).
 3) Open a terminal within the source folder.
 4) `pip install -r requirements.txt`
-5) `py main.py`
+5) Run `START.bat`
 
 #### Shortcut
 1. Right-click on `START.bat`.
