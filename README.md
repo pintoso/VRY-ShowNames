@@ -35,7 +35,7 @@ Fork of [VALORANT rank yoinker](https://github.com/zayKenyon/VALORANT-rank-yoink
 
 1) `pip install cx_Freeze`
 2) `python setup.py build`
-3)  Open the new Build folder and find vRY.exe.
+3)  Open the new Build folder and find `VRY ShowNames.exe`.
 
  
 ## Disclaimer
