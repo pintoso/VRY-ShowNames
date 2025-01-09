@@ -18,7 +18,7 @@ Fork of [VALORANT rank yoinker](https://github.com/zayKenyon/VALORANT-rank-yoink
 ### Running:
 
 1) Download [Python 3.10](https://www.python.org/downloads/release/python-3100/), make sure it is added to the PATH. (This is an option on installation.)
-   1) Any Python version post 3.10 should work.
+   1) 3.11 should work too.
 2) Download the [source](https://github.com/pintoso/VRY-ShowNames/archive/refs/heads/master.zip).
 3) Run `INSTALL.bat`
 4) Run `START.bat`
