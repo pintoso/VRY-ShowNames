@@ -1,3 +1,3 @@
 @echo off
-py "main.py"
+python "main.py"
 pause
