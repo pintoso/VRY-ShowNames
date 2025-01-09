@@ -27,7 +27,7 @@ for /f "tokens=1-3 delims=." %%a in ("%PYTHON_VERSION%") do (
     set PATCH=%%c
 )
 
-REM Check if Python version is >= 3.10
+REM Check if Python version is < 3.10
 if %MAJOR% lss 3 (
     echo.
     echo.
@@ -35,7 +35,7 @@ if %MAJOR% lss 3 (
     echo.
     echo.
     echo.
-    echo Python version is lower than 3.10. Please install Python 3.10 or higher.
+    echo Python version is lower than 3.10. Please install Python 3.10 or 3.11 or 3.12.
     echo.
     echo.
     echo.
@@ -51,7 +51,42 @@ if %MAJOR%==3 if %MINOR% lss 10 (
     echo.
     echo.
     echo.
-    echo Python version is lower than 3.10. Please install Python 3.10 or higher.
+    echo Python version is lower than 3.10. Please install Python 3.10 or 3.11 or 3.12.
+    echo.
+    echo.
+    echo.
+    echo Press any key to exit...
+    pause >nul
+    exit /b
+)
+
+REM Check if Python version is > 3.12
+if %MAJOR% gtr 3 (
+    if %MINOR% gtr 12 (
+        echo.
+        echo.
+        echo.
+        echo.
+        echo.
+        echo.
+        echo Python version is greater than 3.12. Please install Python 3.10 or 3.11 or 3.12.
+        echo.
+        echo.
+        echo.
+        echo Press any key to exit...
+        pause >nul
+        exit /b
+    )
+)
+
+if %MAJOR%==3 if %MINOR% gtr 12 (
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.
+    echo Python version is greater than 3.12. Please install Python 3.10 or 3.11 or 3.12.
     echo.
     echo.
     echo.
