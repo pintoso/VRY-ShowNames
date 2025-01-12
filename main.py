@@ -389,7 +389,8 @@ try:
                         rr = playerRank["rr"]
 
                         #short peak rank string
-                        peakRankAct = f" (e{playerRank['peakrankep']}a{playerRank['peakrankact']})"
+                        has_letter = any(c.isalpha() for c in str(playerRank['peakrankep']))
+                        peakRankAct = f" ({playerRank['peakrankep']}a{playerRank['peakrankact']})" if has_letter else f" (e{playerRank['peakrankep']}a{playerRank['peakrankact']})"
                         if not cfg.get_feature_flag("peak_rank_act"):
                             peakRankAct = ""
 
@@ -572,7 +573,8 @@ try:
                         rr = playerRank["rr"]
 
                         #short peak rank string
-                        peakRankAct = f" (e{playerRank['peakrankep']}a{playerRank['peakrankact']})"
+                        has_letter = any(c.isalpha() for c in str(playerRank['peakrankep']))
+                        peakRankAct = f" ({playerRank['peakrankep']}a{playerRank['peakrankact']})" if has_letter else f" (e{playerRank['peakrankep']}a{playerRank['peakrankact']})"
                         if not cfg.get_feature_flag("peak_rank_act"):
                             peakRankAct = ""
                         # PEAK RANK
@@ -677,7 +679,8 @@ try:
                             rr = playerRank["rr"]
 
                             #short peak rank string
-                            peakRankAct = f" (e{playerRank['peakrankep']}a{playerRank['peakrankact']})"
+                            has_letter = any(c.isalpha() for c in str(playerRank['peakrankep']))
+                            peakRankAct = f" ({playerRank['peakrankep']}a{playerRank['peakrankact']})" if has_letter else f" (e{playerRank['peakrankep']}a{playerRank['peakrankact']})"
                             if not cfg.get_feature_flag("peak_rank_act"):
                                 peakRankAct = ""
 
