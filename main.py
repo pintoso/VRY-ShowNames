@@ -284,9 +284,6 @@ try:
                     for p in Players:
                         if p["Subject"] == Requests.puuid:
                             allyTeam = p["TeamID"]
-                    for p in Players:
-                        if p["Subject"] == Requests.puuid:
-                            allyTeam = p["TeamID"]
                     for player in Players:
                         status.update(f"Loading players... [{playersLoaded}/{len(Players)}]")
                         playersLoaded += 1
