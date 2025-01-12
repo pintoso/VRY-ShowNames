@@ -284,6 +284,9 @@ try:
                     for p in Players:
                         if p["Subject"] == Requests.puuid:
                             allyTeam = p["TeamID"]
+                    for p in Players:
+                        if p["Subject"] == Requests.puuid:
+                            allyTeam = p["TeamID"]
                     for player in Players:
                         status.update(f"Loading players... [{playersLoaded}/{len(Players)}]")
                         playersLoaded += 1
@@ -294,8 +297,6 @@ try:
                                 i = 1
                                 while curr_player_stat["match_id"] == coregame.match_id and len(stats_data[player["Subject"]]) > i:
                                     i+=1
-                                # if curr_player_stat["match_id"] == coregame.match_id and len(stats_data[player["Subject"]]) > 1:
-                                    curr_player_stat = stats_data[player["Subject"]][-i]
                                 if curr_player_stat["match_id"] != coregame.match_id:
                                     #checking for party memebers and self players
                                     times = 0
@@ -304,26 +305,13 @@ try:
                                         if m["match_id"] != coregame.match_id and m["match_id"] not in m_set:
                                             times += 1
                                             m_set += (m["match_id"],)
-                                    if player["PlayerIdentity"]["Incognito"] == False:
-                                        already_played_with.append(
-                                                {
-                                                    "times": times,
-                                                    "name": curr_player_stat["name"],
-                                                    "agent": curr_player_stat["agent"],
-                                                    "time_diff": time.time() - curr_player_stat["epoch"]
-                                                })
-                                    else:
-                                        if player["TeamID"] == allyTeam:
-                                            team_string = "your"
-                                        else:
-                                            team_string = "enemy"
-                                        already_played_with.append(
-                                                {
-                                                    "times": times,
-                                                    "name": agent_dict[player["CharacterID"].lower()] + " on " + team_string + " team",
-                                                    "agent": curr_player_stat["agent"],
-                                                    "time_diff": time.time() - curr_player_stat["epoch"]
-                                                })
+                                    
+                                    already_played_with.append({
+                                        "times": times,
+                                        "name": curr_player_stat["name"],
+                                        "agent": curr_player_stat["agent"],
+                                        "time_diff": time.time() - curr_player_stat["epoch"]
+                                    })
 
                         party_icon = ''
                         # set party premade icon
