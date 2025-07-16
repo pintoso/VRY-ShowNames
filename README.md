@@ -5,10 +5,6 @@ Fork of [VALORANT rank yoinker](https://github.com/zayKenyon/VALORANT-rank-yoink
 
 - Shows hidden names  
 - Removes update system  
-- Removes chatlog file system (no longer works anyway)  
-- Adds colors for new agents
-- Fixed configurator.bat
-- Simplified installation and usage with .bat
 
 <br/>
 
