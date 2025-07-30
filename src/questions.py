@@ -20,7 +20,8 @@ FLAGS_OPTS = {
     "pre_cls": "Pre-Clear Screen",
     "peak_rank_act": "Peak Rank Act",
     "discord_rpc": "Discord Rich Presence",
-    "aggregate_rank_rr": "Display Rank and Ranked Rating in the same column"
+    "aggregate_rank_rr": "Display Rank and Ranked Rating in the same column",
+    "server_id": "Show Server ID"
 }
 
 weapon_question = lambda config: {
