@@ -1,10 +1,10 @@
 import requests
 from colr import color
 
-version = "2.89"
+version = "2.80"
 enablePrivateLogging = True
-hide_names = False
-hide_levels = False
+hide_names = True
+hide_levels = True
 
 
 gamemodes = {
@@ -166,20 +166,21 @@ DEFAULT_CONFIG = {
             "rr": True,
             "earned_rr": True,
             "peakrank": True,
-            "previousrank" : True,
+            "previousrank" : False,
             "leaderboard": True,
             "headshot_percent": True,
             "winrate": True,
-            "kd": True,
+            "kd": False,
             "level": True
         },
         "flags": {
             "last_played": True,
             "auto_hide_leaderboard": True,
             "pre_cls": False,
-            "game_chat": False,
+            "game_chat": True,
             "peak_rank_act": True,
             "discord_rpc": True,
-            "aggregate_rank_rr": True
+            "aggregate_rank_rr": True,
+            "server_id": False
         }
     }
