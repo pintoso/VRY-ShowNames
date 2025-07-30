@@ -12,20 +12,20 @@ class Content():
 
     def get_latest_season_id(self, content):
         for season in content["Seasons"]:
-            if season["IsActive"]:
+            if season["IsActive"] and season["Type"] == "act":
                 self.log(f"retrieved season id: {season['ID']}")
                 return season["ID"]
 
     def get_previous_season_id(self, content):
-        previous = content["Seasons"][0]
+        currentseason = []
         for season in content["Seasons"]:
-            if season["IsActive"]:
-                self.log(f"retrieved previous season id: {previous['ID']}")
-                return previous["ID"]
-            # Only store the previous act.
-            if (season["Type"] == "episode"):
-                continue
-            previous = season
+            if season["IsActive"] and season["Type"] == "act":
+                currentseason = season
+
+        for season in content["Seasons"]:
+            if currentseason["StartTime"] == season["EndTime"] and season["Type"] == "act":
+                self.log(f"retrieved previous season id: {season['ID']}")
+                return season["ID"]
         return None
 
     def get_all_agents(self):
