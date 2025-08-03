@@ -448,7 +448,7 @@ try:
                         # views = get_views(names[player["Subject"]])
 
                         # skin
-                        skin = loadouts[player["Subject"]]
+                        skin = loadouts.get(player["Subject"], "")
 
                         # RANK
                         rankName = NUMBERTORANKS[playerRank["rank"]]
