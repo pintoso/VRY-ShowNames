@@ -22,7 +22,9 @@ FLAGS_OPTS = {
     "discord_rpc": "Discord Rich Presence",
     "aggregate_rank_rr": "Display Rank and Ranked Rating in the same column",
     "server_id": "Show Server Region ID",
-    "short_ranks": "Short rank names instead of long ones"
+    "short_ranks": "Short rank names instead of long ones",
+    "truncate_skins": "Truncate long skin names if the window is too small",
+    "truncate_names": "Truncate long player names if the window is too small"
 }
 
 weapon_question = lambda config: {
@@ -69,7 +71,7 @@ flags_question = lambda config: {
 
 basic_questions = lambda config: [
     weapon_question(config=config),
-    table_question(config=config),
+    table_question(config=config)
 ]
 
 advance_questions = lambda config: [
