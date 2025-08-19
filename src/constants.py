@@ -1,7 +1,7 @@
 import requests
 from colr import color
 
-version = "3.00"
+version = "3.10"
 enablePrivateLogging = True
 hide_names = False
 hide_levels = False
@@ -213,6 +213,8 @@ DEFAULT_CONFIG = {
             "discord_rpc": True,
             "aggregate_rank_rr": True,
             "server_id": False,
-            "short_ranks": False
+            "short_ranks": False,
+            "truncate_skins": True,
+            "truncate_names": True
         }
     }
