@@ -43,6 +43,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 os.system(f"title VRY ShowNames v{version}")
 
 server = ""
+team_side = None
 
 def program_exit(status: int):  # so we don't need to import the entire sys module
     log(f"exited program with error code {status}")
@@ -123,7 +124,7 @@ try:
 
     colors = Colors(hide_names, agent_dict, AGENTCOLORLIST)
 
-    loadoutsClass = Loadouts(Requests, log, colors, Server, current_map)
+    loadoutsClass = Loadouts(Requests, log, colors, Server, current_map, cfg)
     table = Table(cfg, log)
 
     stats = Stats()
@@ -940,6 +941,13 @@ try:
             if (title := game_state_dict.get(game_state)) is None:
                 # program_exit(1)
                 time.sleep(9)
+            
+            title_parts = [f"VALORANT status: {title}"]
+            
+            if game_state == "PREGAME" and pregame_stats is not None and cfg.get_feature_flag("starting_side"):
+                team_side = "Attacker" if pregame_stats["AllyTeam"]["TeamID"] == "Red" else "Defender"
+                title_parts.append(f" | {colr(team_side, fore=(76, 151, 237) if team_side == 'Defender' else (238, 77, 77))}")
+            
             if cfg.get_feature_flag("server_id") and server != "":
                 parts = server.split('.')
                 if len(parts) > 2:
@@ -947,11 +955,9 @@ try:
                 else:
                     short_serverID = server
 
-                table.set_title(
-                    f"VALORANT status: {title} {colr('- ' + short_serverID, fore=(200, 200, 200))}"
-                )
-            else:
-                table.set_title(f"VALORANT status: {title}")
+                title_parts.append(f" {colr('- ' + short_serverID, fore=(200, 200, 200))}")
+            
+            table.set_title(''.join(title_parts))
             
             if title is not None:
                 if cfg.get_feature_flag("auto_hide_leaderboard") and (
