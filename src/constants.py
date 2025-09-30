@@ -202,7 +202,8 @@ DEFAULT_CONFIG = {
             "headshot_percent": True,
             "winrate": True,
             "kd": True,
-            "level": True
+            "level": True,
+            "skin_name_length": 0
         },
         "flags": {
             "last_played": True,
@@ -215,6 +216,7 @@ DEFAULT_CONFIG = {
             "server_id": False,
             "short_ranks": False,
             "truncate_skins": True,
-            "truncate_names": True
+            "truncate_names": True,
+            "starting_side": False
         }
     }
