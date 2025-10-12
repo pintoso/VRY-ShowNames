@@ -360,10 +360,9 @@ try:
                                     and len(stats_data[player["Subject"]]) > i
                                 ):
                                     i += 1
-                                    # if curr_player_stat["match_id"] == coregame.match_id and len(stats_data[player["Subject"]]) > 1:
                                     curr_player_stat = stats_data[player["Subject"]][-i]
                                 if curr_player_stat["match_id"] != coregame.match_id:
-                                    # checking for party memebers and self players
+                                    # checking for party members and self players
                                     times = 0
                                     m_set = ()
                                     for m in stats_data[player["Subject"]]:
@@ -376,11 +375,10 @@ try:
                                     
                                     already_played_with.append({
                                         "times": times,
-                                        "name": curr_player_stat["name"],
+                                        "name": names[player["Subject"]],
                                         "agent": curr_player_stat["agent"],
                                         "time_diff": time.time() - curr_player_stat["epoch"]
                                     })
-
 
                         party_icon = ""
                         # set party premade icon
