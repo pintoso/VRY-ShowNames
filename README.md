@@ -26,6 +26,9 @@ Fork of [VALORANT rank yoinker](https://github.com/zayKenyon/VALORANT-rank-yoink
 ##
 
 <br/>
+
+#### "Why not provide a public .exe?" [Read here](https://github.com/pintoso/VRY-ShowNames/issues/6#issuecomment-3391663074)
+
 <br/>
 <br/>
 
