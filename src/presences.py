@@ -16,7 +16,7 @@ class Presences:
     def get_game_state(self, presences):
         private_presence = self.get_private_presence(presences)
         if private_presence:
-            return private_presence["sessionLoopState"]
+            return private_presence["matchPresenceData"]["sessionLoopState"]
         return None
 
     def get_private_presence(self, presences):
