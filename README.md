@@ -1,3 +1,10 @@
+<h1 align="center">⚠️</h3>
+<h3 align="center">This project is for educational and study purposes only.</h3>
+<h3 align="center">As I have nothing left to learn, the project will be archived.</h3>
+<h1 align="center">⚠️</h3>
+<br/>
+<br/>
+<br/>
 <h3 align="center"> VRY ShowNames</h3>
 
 Fork of [VALORANT rank yoinker](https://github.com/zayKenyon/VALORANT-rank-yoinker)
